@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/gnome/theme">
+    <file>graphics/background.png</file>
+    <file>graphics/blurred6.png</file>
+    <file>graphics/blurred6_black.png</file>
+    <file>graphics/blurredT.png</file>
+    <file>graphics/bullet-symbolic.svg</file>
+    <file>graphics/combo-box-arrow.svg</file>
+    <file>graphics/combo-box-arrow@2.svg</file>
+    <file>graphics/combo-box-arrow-disabled.svg</file>
+    <file>graphics/combo-box-arrow-disabled@2.svg</file>
+    <file>graphics/list-remove-symbolic.svg</file>
+    <file>graphics/Null.svg</file>
+    <file>graphics/object-select-symbolic.svg</file>
+    <file>graphics/object-select-symbolic@2.svg</file>
+    <file>graphics/titlebutton-close.svg</file>
+    <file>graphics/titlebutton-close@2.svg</file>
+    <file>graphics/titlebutton-close-dark.svg</file>
+    <file>graphics/titlebutton-maximize.svg</file>
+    <file>graphics/titlebutton-maximize@2.svg</file>
+    <file>graphics/titlebutton-maximize-dark.svg</file>
+    <file>graphics/titlebutton-minimize.svg</file>
+    <file>graphics/titlebutton-minimize@2.svg</file>
+    <file>graphics/titlebutton-minimize-dark.svg</file>
+    <file>graphics/titlebutton-symbolic.svg</file>
+    <file>colors-scheme-dark.css</file>
+    <file>main-dark.css</file>
+    <file>window-buttons-dark-rounded.css</file>
+    <file>gtk.css</file>
+  </gresource>
+</gresources>
