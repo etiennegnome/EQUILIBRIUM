@@ -1,0 +1,179 @@
+/*******************************************************************/
+/*(((((((((( Titlebuttons ))))))))))*/
+
+.titlebar button.titlebutton,
+headerbar button.titlebutton{
+  border-color: shade(@headerbar_color,0.9);
+  border-bottom-color: shade(@headerbar_color,0.8);
+  min-width: 1.4545px; /*0.1rem;*/
+  min-height: 1.4545px; /*0.1rem;*/
+  text-shadow:none;
+  box-shadow:none;
+  padding: 0;
+  color:transparent;
+  background-image: none;
+  background-color: transparent;
+  margin-left:2px;
+  margin-right: 2px;
+  border-radius: 5px;
+}
+
+/* Bouton BACKDROP */
+
+headerbar button.titlebutton.close:backdrop,
+.titlebar button.titlebutton.close:backdrop,
+headerbar button.titlebutton.minimize:backdrop,
+.titlebar button.titlebutton.minimize:backdrop,
+headerbar button.titlebutton.maximize:backdrop,
+.titlebar button.titlebutton.maximize:backdrop,
+headerbar button.titlebutton.restore:backdrop,
+.titlebar button.titlebutton.restore:backdrop,
+.fullscreen headerbar button.titlebutton.maximize:backdrop,
+.maximized headerbar button.titlebutton.maximize:backdrop, 
+.fullscreen.titlebar button.titlebutton.maximize:backdrop,
+.maximized.titlebar button.titlebutton.maximize:backdrop {
+  border-color: shade(@headerbar_color,0.95);
+  border-bottom-color: shade(@headerbar_color,0.85);
+  /*background-image: image(@backdrop_color);*/
+  background-image: linear-gradient(to bottom, shade(@backdrop_color, 1.05), shade(@backdrop_color, 0.945) 40%, shade(@backdrop_color, 0.91) 60%, shade(@backdrop_color, 0.90));
+  box-shadow: 0 1px 1px rgba(255,255,255,0.50), inset 1px 1px 1px 0px rgba(0,0,0,0.18), inset -1px 1px 1px 0px rgba(0,0,0,0.18), inset 0px -1px 1px 0px rgba(0,0,0,0.10), inset 0 1px 1px rgba(255,255,255,0.20);
+}
+
+/* Bouton CLOSE */
+
+.titlebar button.titlebutton.close,
+headerbar button.titlebutton.close{
+  background-image: linear-gradient(to bottom, shade(@close_color, 1.45), shade(@close_color, 1.05) 2px, shade(@close_color, 0.945) 40%, shade(@close_color, 0.91) 60%, shade(@close_color, 0.90));
+  background-position: center center;
+  box-shadow: 0 1px 1px rgba(255,255,255,0.50), inset 1px 1px 1px 0px rgba(0,0,0,0.30), inset -1px 1px 1px 0px rgba(0,0,0,0.30), inset 0px -1px 1px 0px rgba(0,0,0,0.20), inset 0 1px 1px rgba(255,255,255,0.20);
+}
+
+.titlebar button.titlebutton.close:hover,
+headerbar button.titlebutton.close:hover{
+  transition: 250ms linear;
+  background-image: image(-gtk-scaled(url("graphics/titlebutton-close.svg"),url("graphics/titlebutton-close@2.svg"))), linear-gradient(to bottom, shade(@close_color, 1.25), shade(@close_color, 1.145) 40%, shade(@close_color, 1.11) 60%, shade(@close_color, 1.10));
+}
+
+headerbar button.titlebutton.close:active,
+.titlebar button.titlebutton.close:active {
+  transition: 250ms ease-in-out;
+  color: transparent;
+  border-color: shade(@headerbar_color,0.9);
+  border-bottom-color: shade(@headerbar_color,0.8);
+  background-image: image(-gtk-scaled(url("graphics/titlebutton-close.svg"),url("graphics/titlebutton-close@2.svg"))), linear-gradient(to bottom, shade(@close_color, 0.95), shade(@close_color, 0.845) 40%, shade(@close_color, 0.81) 60%, shade(@close_color, 0.80));
+  box-shadow: 0 1px 1px rgba(255,255,255,0.50), inset 1px 1px 2px 0px rgba(0,0,0,0.40), inset -1px 1px 2px 0px rgba(0,0,0,0.40), inset 0px -1px 2px 0px rgba(255,255,255,0.50);
+}
+
+/* Bouton MINIMIZE */
+
+.titlebar button.titlebutton.minimize,
+headerbar button.titlebutton.minimize{
+  background-image: linear-gradient(to bottom, shade(@minimize_color, 1.45), shade(@minimize_color, 1.05) 2px, shade(@minimize_color, 0.945) 40%, shade(@minimize_color, 0.91) 60%, shade(@minimize_color, 0.90));
+  background-position: center center;
+  box-shadow: 0 1px 1px rgba(255,255,255,0.50), inset 1px 1px 1px 0px rgba(0,0,0,0.30), inset -1px 1px 1px 0px rgba(0,0,0,0.30), inset 0px -1px 1px 0px rgba(0,0,0,0.20), inset 0 1px 1px rgba(255,255,255,0.20);
+}
+
+.titlebar button.titlebutton.minimize:hover,
+headerbar button.titlebutton.minimize:hover{
+  transition: 250ms linear;
+  background-image: image(-gtk-scaled(url("graphics/titlebutton-minimize.svg"),url("graphics/titlebutton-minimize@2.svg"))), linear-gradient(to bottom, shade(@minimize_color, 1.25), shade(@minimize_color, 1.145) 40%, shade(@minimize_color, 1.11) 60%, shade(@minimize_color, 1.10));
+}
+
+headerbar button.titlebutton.minimize:active,
+.titlebar button.titlebutton.minimize:active {
+  transition: 250ms ease-in-out;
+  color: transparent;
+  border-color: shade(@headerbar_color,0.9);
+  border-bottom-color: shade(@headerbar_color,0.8);
+  background-image: image(-gtk-scaled(url("graphics/titlebutton-minimize.svg"),url("graphics/titlebutton-minimize@2.svg"))), linear-gradient(to bottom, shade(@minimize_color, 0.95), shade(@minimize_color, 0.845) 40%, shade(@minimize_color, 0.81) 60%, shade(@minimize_color, 0.80));
+  box-shadow: 0 1px 1px rgba(255,255,255,0.50), inset 1px 1px 2px 0px rgba(0,0,0,0.40), inset -1px 1px 2px 0px rgba(0,0,0,0.40), inset 0px -1px 2px 0px rgba(255,255,255,0.50);
+}
+
+/* Bouton MAXIMIZE */
+
+.titlebar button.titlebutton.maximize,
+headerbar button.titlebutton.maximize{
+  background-image: linear-gradient(to bottom, shade(@maximize_color, 1.45), shade(@maximize_color, 1.05) 2px, shade(@maximize_color, 0.945) 40%, shade(@maximize_color, 0.91) 60%, shade(@maximize_color, 0.90));
+  background-position: center center;
+  box-shadow: 0 1px 1px rgba(255,255,255,0.50), inset 1px 1px 1px 0px rgba(0,0,0,0.30), inset -1px 1px 1px 0px rgba(0,0,0,0.30), inset 0px -1px 1px 0px rgba(0,0,0,0.20), inset 0 1px 1px rgba(255,255,255,0.20);
+}
+
+.titlebar button.titlebutton.maximize:hover,
+headerbar button.titlebutton.maximize:hover{
+  transition: 250ms linear;
+  background-image: image(-gtk-scaled(url("graphics/titlebutton-maximize.svg"),url("graphics/titlebutton-maximize@2.svg"))), linear-gradient(to bottom, shade(@maximize_color, 1.25), shade(@maximize_color, 1.145) 40%, shade(@maximize_color, 1.11) 60%, shade(@maximize_color, 1.10));
+}
+
+headerbar button.titlebutton.maximize:active,
+.titlebar button.titlebutton.maximize:active {
+  transition: 250ms ease-in-out;
+  color: transparent;
+  border-color: shade(@headerbar_color,0.9);
+  border-bottom-color: shade(@headerbar_color,0.8);
+  background-image: image(-gtk-scaled(url("graphics/titlebutton-maximize.svg"),url("graphics/titlebutton-maximize@2.svg"))), linear-gradient(to bottom, shade(@maximize_color, 0.95), shade(@maximize_color, 0.845) 40%, shade(@maximize_color, 0.81) 60%, shade(@maximize_color, 0.80));
+  box-shadow: 0 1px 1px rgba(255,255,255,0.50), inset 1px 1px 2px 0px rgba(0,0,0,0.40), inset -1px 1px 2px 0px rgba(0,0,0,0.40), inset 0px -1px 2px 0px rgba(255,255,255,0.50);
+}
+
+/* Bouton RESTORE */
+
+.titlebar button.titlebutton.restore,
+headerbar button.titlebutton.restore{
+  background-image: linear-gradient(to bottom, shade(@restore_color, 1.45), shade(@restore_color, 1.05) 2px, shade(@restore_color, 0.945) 40%, shade(@restore_color, 0.91) 60%, shade(@restore_color, 0.90));
+  background-position: center center;
+  box-shadow: 0 1px 1px rgba(255,255,255,0.50), inset 1px 1px 1px 0px rgba(0,0,0,0.30), inset -1px 1px 1px 0px rgba(0,0,0,0.30), inset 0px -1px 1px 0px rgba(0,0,0,0.20), inset 0 1px 1px rgba(255,255,255,0.20);
+}
+
+.titlebar button.titlebutton.restore:hover,
+headerbar button.titlebutton.restore:hover{
+  transition: 250ms linear;
+  background-image: image(-gtk-scaled(url("graphics/titlebutton-maximize.svg"),url("graphics/titlebutton-maximize@2.svg"))), linear-gradient(to bottom, shade(@restore_color, 1.25), shade(@restore_color, 1.145) 40%, shade(@restore_color, 1.11) 60%, shade(@restore_color, 1.10));
+}
+
+headerbar button.titlebutton.restore:active,
+.titlebar button.titlebutton.restore:active {
+  transition: 250ms ease-in-out;
+  color: transparent;
+  border-color: shade(@headerbar_color,0.9);
+  border-bottom-color: shade(@headerbar_color,0.8);
+  background-image: image(-gtk-scaled(url("graphics/titlebutton-maximize.svg"),url("graphics/titlebutton-maximize@2.svg"))), linear-gradient(to bottom, shade(@restore_color, 0.95), shade(@restore_color, 0.845) 40%, shade(@restore_color, 0.81) 60%, shade(@restore_color, 0.80));
+  box-shadow: 0 1px 1px rgba(255,255,255,0.50), inset 1px 1px 2px 0px rgba(0,0,0,0.40), inset -1px 1px 2px 0px rgba(0,0,0,0.40), inset 0px -1px 2px 0px rgba(255,255,255,0.50);
+}
+
+/* Fullscreen */
+
+.fullscreen headerbar button.titlebutton.maximize,
+.maximized headerbar button.titlebutton.maximize, 
+.fullscreen.titlebar button.titlebutton.maximize,
+.maximized.titlebar button.titlebutton.maximize {
+  background-image: linear-gradient(to bottom, shade(@maximize_color, 1.45), shade(@maximize_color, 1.05) 2px, shade(@maximize_color, 0.945) 40%, shade(@maximize_color, 0.91) 60%, shade(@maximize_color, 0.90));
+  background-position: center center;
+  box-shadow: 0 1px 1px rgba(255,255,255,0.50), inset 1px 1px 1px 0px rgba(0,0,0,0.30), inset -1px 1px 1px 0px rgba(0,0,0,0.30), inset 0px -1px 1px 0px rgba(0,0,0,0.20), inset 0 1px 1px rgba(255,255,255,0.20);
+}
+
+.fullscreen headerbar button.titlebutton.maximize:hover,
+.maximized headerbar button.titlebutton.maximize:hover, 
+.fullscreen.titlebar button.titlebutton.maximize:hover,
+.maximized.titlebar button.titlebutton.maximize:hover {
+  transition: 250ms linear;
+  background-image: image(-gtk-scaled(url("graphics/titlebutton-maximize.svg"),url("graphics/titlebutton-maximize@2.svg"))), linear-gradient(to bottom, shade(@maximize_color, 1.25), shade(@maximize_color, 1.145) 40%, shade(@maximize_color, 1.11) 60%, shade(@maximize_color, 1.10));
+}
+
+.fullscreen headerbar button.titlebutton.maximize:active,
+.maximized headerbar button.titlebutton.maximize:active, 
+.fullscreen.titlebar button.titlebutton.maximize:active,
+.maximized.titlebar button.titlebutton.maximize:active {
+  transition: 250ms ease-in-out;
+  color: transparent;
+  border-color: shade(@headerbar_color,0.9);
+  border-bottom-color: shade(@headerbar_color,0.8);
+  background-image: image(-gtk-scaled(url("graphics/titlebutton-maximize.svg"),url("graphics/titlebutton-maximize@2.svg"))), linear-gradient(to bottom, shade(@maximize_color, 0.95), shade(@maximize_color, 0.845) 40%, shade(@maximize_color, 0.81) 60%, shade(@maximize_color, 0.80));
+  box-shadow: 0 1px 1px rgba(255,255,255,0.50), inset 1px 1px 2px 0px rgba(0,0,0,0.40), inset -1px 1px 2px 0px rgba(0,0,0,0.40), inset 0px -1px 2px 0px rgba(255,255,255,0.50);
+}
+
+.titlebar button:backdrop,
+headerbar button:backdrop{
+  opacity:0.8;}
+
+/*(((((((((( End Titlebuttons ))))))))))*/
+/*******************************************************************/
+

@@ -1,0 +1,185 @@
+/*******************************************************************/
+/*(((((((((( Titlebuttons ))))))))))*/
+
+.titlebar button.titlebutton,
+headerbar button.titlebutton{
+
+  border: none;
+  min-width: 1.4545px; /*0.1rem;*/
+  min-height: 1.4545px; /*0.1rem;*/
+  text-shadow:none;
+  box-shadow:none;
+  padding: 0;
+  color:transparent;
+  background-image: none;
+  background-color: transparent;
+  margin-left:2px;
+  margin-right: 2px;
+  border-radius: 9999px;
+}
+
+/* Bouton CLOSE */
+
+.titlebar button.titlebutton.close,
+headerbar button.titlebutton.close{
+  background-image: radial-gradient(circle at center,@close_color,@close_color,shade(@close_color, 0.8) 11px);
+  /*box-shadow: inset 1px 1px 1px 0px rgba(0,0,0,0.20), -1px -1px 1px 0px alpha(#ffffff,0.08), 1px 1px 1px 0px alpha(#303338,0.10);*/
+  box-shadow: inset 0px 1px 1px 0px rgba(0,0,0,0.20), 0px -1px 1px 0px alpha(#ffffff,0.08), 0px 1px 1px 0px alpha(#303338,0.10);
+  background-position: center center;
+}
+
+headerbar button.titlebutton.close:backdrop,
+.titlebar button.titlebutton.close:backdrop {
+  background-image: radial-gradient(circle at center,@backdrop_color,@backdrop_color,shade(@backdrop_color, 0.8) 11px);
+}
+
+.titlebar button.titlebutton.close:hover,
+headerbar button.titlebutton.close:hover{
+  transition: 250ms linear;
+  background-image:image(-gtk-scaled(url("graphics/titlebutton-close.svg"),url("graphics/titlebutton-close@2.svg"))), radial-gradient(circle at center,shade(@close_color, 1.2),shade(@close_color, 1.2),@close_color 11px);
+}
+
+headerbar button.titlebutton.close:active,
+.titlebar button.titlebutton.close:active {
+  transition: 250ms ease-in-out;
+  color: transparent;
+  background-image:image(-gtk-scaled(url("graphics/titlebutton-close.svg"),url("graphics/titlebutton-close@2.svg"))), radial-gradient(circle at center,shade(@close_color, 0.9),shade(@close_color, 0.9),shade(@close_color, 0.7) 11px);
+  /*box-shadow: inset 2px 2px 2px 0px rgba(0,0,0,0.20), -1px -1px 1px 0px alpha(#ffffff,0.08), 1px 1px 1px 0px alpha(#303338,0.10);*/
+  box-shadow: inset 0px 2px 2px 0px rgba(0,0,0,0.20), 0px -1px 1px 0px alpha(#ffffff,0.08), 0px 1px 1px 0px alpha(#303338,0.10);
+}
+
+/* Bouton MINIMIZE */
+
+.titlebar button.titlebutton.minimize,
+headerbar button.titlebutton.minimize{
+  background-image: radial-gradient(circle at center,@minimize_color,@minimize_color,shade(@minimize_color, 0.8) 11px);
+  /*box-shadow: inset 1px 1px 1px 0px rgba(0,0,0,0.20), -1px -1px 1px 0px alpha(#ffffff,0.08), 1px 1px 1px 0px alpha(#303338,0.10);*/
+  box-shadow: inset 0px 1px 1px 0px rgba(0,0,0,0.20), 0px -1px 1px 0px alpha(#ffffff,0.08), 0px 1px 1px 0px alpha(#303338,0.10);
+  background-position: center center;
+}
+
+headerbar button.titlebutton.minimize:backdrop,
+.titlebar button.titlebutton.minimize:backdrop {
+  background-image: radial-gradient(circle at center,@backdrop_color,@backdrop_color,shade(@backdrop_color, 0.8) 11px);
+}
+
+.titlebar button.titlebutton.minimize:hover,
+headerbar button.titlebutton.minimize:hover{
+  transition: 250ms linear;
+  background-image:image(-gtk-scaled(url("graphics/titlebutton-minimize.svg"),url("graphics/titlebutton-minimize@2.svg"))),radial-gradient(circle at center,shade(@minimize_color, 1.2),shade(@minimize_color, 1.2),@minimize_color 11px);
+}
+
+headerbar button.titlebutton.minimize:active,
+.titlebar button.titlebutton.minimize:active {
+  transition: 250ms ease-in-out;
+  color: transparent;
+  background-image:image(-gtk-scaled(url("graphics/titlebutton-minimize.svg"),url("graphics/titlebutton-minimize@2.svg"))),radial-gradient(circle at center,shade(@minimize_color, 0.9),shade(@minimize_color, 0.9),shade(@minimize_color, 0.7) 11px);
+  /*box-shadow: inset 2px 2px 2px 0px rgba(0,0,0,0.20), -1px -1px 1px 0px alpha(#ffffff,0.08), 1px 1px 1px 0px alpha(#303338,0.10);*/
+  box-shadow: inset 0px 2px 2px 0px rgba(0,0,0,0.20), 0px -1px 1px 0px alpha(#ffffff,0.08), 0px 1px 1px 0px alpha(#303338,0.10);
+}
+
+/* Bouton MAXIMIZE */
+
+.titlebar button.titlebutton.maximize,
+headerbar button.titlebutton.maximize{
+  background-image: radial-gradient(circle at center,@maximize_color,@maximize_color,shade(@maximize_color, 0.8) 11px);
+  /*box-shadow: inset 1px 1px 1px 0px rgba(0,0,0,0.20), -1px -1px 1px 0px alpha(#ffffff,0.08), 1px 1px 1px 0px alpha(#303338,0.10);*/
+  box-shadow: inset 0px 1px 1px 0px rgba(0,0,0,0.20), 0px -1px 1px 0px alpha(#ffffff,0.08), 0px 1px 1px 0px alpha(#303338,0.10);
+  background-position: center center;
+}
+
+headerbar button.titlebutton.maximize:backdrop,
+.titlebar button.titlebutton.maximize:backdrop {
+  background-image: radial-gradient(circle at center,@backdrop_color,@backdrop_color,shade(@backdrop_color, 0.8) 11px);
+}
+
+.titlebar button.titlebutton.maximize:hover,
+headerbar button.titlebutton.maximize:hover{
+  transition: 250ms linear;
+  background-image:image(-gtk-scaled(url("graphics/titlebutton-maximize.svg"),url("graphics/titlebutton-maximize@2.svg"))),radial-gradient(circle at center,shade(@maximize_color, 1.2),shade(@maximize_color, 1.2),@maximize_color 11px);
+}
+
+headerbar button.titlebutton.maximize:active,
+.titlebar button.titlebutton.maximize:active {
+  transition: 250ms ease-in-out;
+  color: transparent;
+  background-image:image(-gtk-scaled(url("graphics/titlebutton-maximize.svg"),url("graphics/titlebutton-maximize@2.svg"))),radial-gradient(circle at center,shade(@maximize_color, 0.9),shade(@maximize_color, 0.9),shade(@maximize_color, 0.7) 11px);
+  /*box-shadow: inset 2px 2px 2px 0px rgba(0,0,0,0.20), -1px -1px 1px 0px alpha(#ffffff,0.08), 1px 1px 1px 0px alpha(#303338,0.10);*/
+  box-shadow: inset 0px 2px 2px 0px rgba(0,0,0,0.20), 0px -1px 1px 0px alpha(#ffffff,0.08), 0px 1px 1px 0px alpha(#303338,0.10);
+}
+
+/* Bouton RESTORE */
+
+.titlebar button.titlebutton.restore,
+headerbar button.titlebutton.restore{
+  background-image: radial-gradient(circle at center,@restore_color,@restore_color,shade(@restore_color, 0.8) 11px);
+  /*box-shadow: inset 1px 1px 1px 0px rgba(0,0,0,0.20), -1px -1px 1px 0px alpha(#ffffff,0.08), 1px 1px 1px 0px alpha(#303338,0.10);*/
+  box-shadow: inset 0px 1px 1px 0px rgba(0,0,0,0.20), 0px -1px 1px 0px alpha(#ffffff,0.08), 0px 1px 1px 0px alpha(#303338,0.10);
+  background-position: center center;
+}
+
+headerbar button.titlebutton.restore:backdrop,
+.titlebar button.titlebutton.restore:backdrop {
+  background-image: radial-gradient(circle at center,@backdrop_color,@backdrop_color,shade(@backdrop_color, 0.8) 11px);
+}
+
+.titlebar button.titlebutton.restore:hover,
+headerbar button.titlebutton.restore:hover{
+  transition: 250ms linear;
+  background-image:image(-gtk-scaled(url("graphics/titlebutton-maximize.svg"),url("graphics/titlebutton-maximize@2.svg"))),radial-gradient(circle at center,shade(@restore_color, 1.2),shade(@restore_color, 1.2),@restore_color 11px);
+}
+
+headerbar button.titlebutton.restore:active,
+.titlebar button.titlebutton.restore:active {
+  transition: 250ms ease-in-out;
+  color: transparent;
+  background-image:image(-gtk-scaled(url("graphics/titlebutton-maximize.svg"),url("graphics/titlebutton-maximize@2.svg"))),radial-gradient(circle at center,shade(@restore_color, 0.9),shade(@restore_color, 0.9),shade(@restore_color, 0.7) 11px);
+  /*box-shadow: inset 2px 2px 2px 0px rgba(0,0,0,0.20), -1px -1px 1px 0px alpha(#ffffff,0.08), 1px 1px 1px 0px alpha(#303338,0.10);*/
+  box-shadow: inset 0px 2px 2px 0px rgba(0,0,0,0.20), 0px -1px 1px 0px alpha(#ffffff,0.08), 0px 1px 1px 0px alpha(#303338,0.10);
+}
+
+/* Fullscreen */
+
+.fullscreen headerbar button.titlebutton.maximize,
+.maximized headerbar button.titlebutton.maximize, 
+.fullscreen.titlebar button.titlebutton.maximize,
+.maximized.titlebar button.titlebutton.maximize {
+  background-image: radial-gradient(circle at center,@maximize_color,@maximize_color,shade(@maximize_color, 0.8) 11px);
+  /*box-shadow: inset 1px 1px 1px 0px rgba(0,0,0,0.20), -1px -1px 1px 0px alpha(#ffffff,0.08), 1px 1px 1px 0px alpha(#303338,0.10);*/
+  box-shadow: inset 0px 1px 1px 0px rgba(0,0,0,0.20), 0px -1px 1px 0px alpha(#ffffff,0.08), 0px 1px 1px 0px alpha(#303338,0.10);
+  background-position: center center;
+}
+
+.fullscreen headerbar button.titlebutton.maximize:backdrop,
+.maximized headerbar button.titlebutton.maximize:backdrop, 
+.fullscreen.titlebar button.titlebutton.maximize:backdrop,
+.maximized.titlebar button.titlebutton.maximize:backdrop {
+  background-image: radial-gradient(circle at center,@backdrop_color,@backdrop_color,shade(@backdrop_color, 0.8) 11px);
+}
+
+.fullscreen headerbar button.titlebutton.maximize:hover,
+.maximized headerbar button.titlebutton.maximize:hover, 
+.fullscreen.titlebar button.titlebutton.maximize:hover,
+.maximized.titlebar button.titlebutton.maximize:hover {
+  transition: 250ms linear;
+  background-image:image(-gtk-scaled(url("graphics/titlebutton-maximize.svg"),url("graphics/titlebutton-maximize@2.svg"))),radial-gradient(circle at center,shade(@maximize_color, 1.2),shade(@maximize_color, 1.2),@maximize_color 11px);
+}
+
+.fullscreen headerbar button.titlebutton.maximize:active,
+.maximized headerbar button.titlebutton.maximize:active, 
+.fullscreen.titlebar button.titlebutton.maximize:active,
+.maximized.titlebar button.titlebutton.maximize:active {
+  transition: 250ms ease-in-out;
+  color: transparent;
+  background-image:image(-gtk-scaled(url("graphics/titlebutton-maximize.svg"),url("graphics/titlebutton-maximize@2.svg"))),radial-gradient(circle at center,shade(@maximize_color, 0.9),shade(@maximize_color, 0.9),shade(@maximize_color, 0.7) 11px);
+  /*box-shadow: inset 2px 2px 2px 0px rgba(0,0,0,0.20), -1px -1px 1px 0px alpha(#ffffff,0.08), 1px 1px 1px 0px alpha(#303338,0.10);*/
+  box-shadow: inset 0px 2px 2px 0px rgba(0,0,0,0.20), 0px -1px 1px 0px alpha(#ffffff,0.08), 0px 1px 1px 0px alpha(#303338,0.10);
+}
+
+.titlebar button:backdrop,
+headerbar button:backdrop{
+  opacity:0.8;}
+
+/*(((((((((( End Titlebuttons ))))))))))*/
+/*******************************************************************/
+

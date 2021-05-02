@@ -1,0 +1,64 @@
+/******************************************************************************/
+/*(((((((( defining accent color )))))*/
+
+@define-color color_accent #f3ba4b;
+@define-color disabled_color_accent mix(shade(@color_accent, 0.60), shade(@normal_button_color, 0.85), 0.3);
+
+/*******************************************************************************/
+/*(((((((( defining headerbar colors )))))*/
+
+@define-color headerbar_color #6C6C6C;
+@define-color headerbar_text_color #ECECEC;
+@define-color headerbar_selected_text_color #404040;
+@define-color headerbar_text_shadow_color #000000;
+@define-color headerbar_selected_text_shadow_color transparent;
+@define-color headerbar_selected_accent_color @color_accent;
+
+/******************************************************************************/
+/*(((((((( defining color for bottom edge )))))*/
+
+@define-color bottom_edge_color @headerbar_color;
+
+/******************************************************************************/
+/*(((((((( defining normal button color )))))*/
+
+@define-color normal_button_color #595959;
+
+/******************************************************************************/
+/*(((((((( defining colors for other widgets )))))*/
+
+@define-color text_color #FFFFFF;
+@define-color selected_text_color #555555;
+@define-color text_shadow_color transparent;
+@define-color disabled_text_color #8b8b8b;
+
+/*******************************************************************************/
+/*(((((((((( defining colors of the sidebar )))))))))*/
+
+@define-color sidebar_bg_color #2E2E2D;
+@define-color sidebar_bg_color_hover #3A3A3A;
+@define-color sidebar_color_accent @color_accent;
+@define-color sidebar_text_color #FFFFFF;
+@define-color sidebar_text_color_hover #FFFFFF;
+@define-color sidebar_selected_text_color #404040;
+
+/*******************************************************************************/
+/*(((((((((( defining bg-color of menus/popover )))))))))*/
+
+@define-color menu_popover_bg_color #2E2E2D;
+@define-color menu_popover_color_accent @sidebar_color_accent;
+
+/*******************************************************************************/
+/*(((((((((( defining windows background color )))))))))*/
+
+@define-color global_bg_color #3d3d3d;
+@define-color nautilus_notebook_bg_color #3d3d3d;
+
+/*******************************************************************************/
+/*(((((((( defining the colors of the windowbuttons )))))*/
+
+@define-color minimize_color #E87E3B;
+@define-color maximize_color @color_accent;
+@define-color close_color #EE4646;
+@define-color restore_color @maximize_color;
+@define-color backdrop_color #555555;
